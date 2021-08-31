@@ -46,6 +46,20 @@ public class LinkedList<T> {
 
 	}
 
+	public void insertAtIndex(int index, T data) {
+		Node<T> newNode = new Node<>(data);
+		newNode.data = data;
+		newNode.next = null;
+
+		Node<T> temp = head;
+		for (int i = 0; i < index - 1; i++) {
+			temp = temp.next;
+		}
+		newNode.next = temp.next;
+		temp.next = newNode;
+
+	}
+
 	/**
 	 * This method is to print linkedlist Temporary node temp is used to traverse
 	 */

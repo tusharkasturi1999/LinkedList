@@ -15,8 +15,10 @@ public class LinkedListDriver {
 	public static void main(String[] args) {
 		LinkedList<Integer> object = new LinkedList<>();
 		object.insert(56);
-		object.insert(30);
+		object.show();
 		object.insert(70);
+		object.show();
+		object.insertAtIndex(1,30);
 
 		object.show();
 	}
