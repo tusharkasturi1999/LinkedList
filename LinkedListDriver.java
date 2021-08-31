@@ -14,9 +14,9 @@ public class LinkedListDriver {
 	 */
 	public static void main(String[] args) {
 		LinkedList<Integer> object = new LinkedList<>();
-		object.insertAtStart(70);
-		object.insertAtStart(56);
-		object.insertAtStart(30);
+		object.insert(56);
+		object.insert(30);
+		object.insert(70);
 
 		object.show();
 	}
