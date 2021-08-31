@@ -7,8 +7,10 @@ package com.bridgelabz.datastructure;
 public class LinkedListDriver {
 
 	/**
+	 * 
 	 * This method is the main method Object object of LinkedList is created to
 	 * insert integers
+	 * 
 	 */
 	public static void main(String[] args) {
 		LinkedList<Integer> object = new LinkedList<>();

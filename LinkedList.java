@@ -30,7 +30,9 @@ public class LinkedList<T> {
 	}
 
 	/**
+	 * 
 	 * This method is to print linkedlist temporary node temp is used to traverse
+	 * 
 	 */
 	public void show() {
 
