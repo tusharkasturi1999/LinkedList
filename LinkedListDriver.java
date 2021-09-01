@@ -20,7 +20,7 @@ public class LinkedListDriver {
 		object.show();
 		object.insertAtIndex(0,30);
 		object.show();
-		object.pop();
+		object.popLast();
 		object.show();
 	}
 }

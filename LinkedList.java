@@ -84,6 +84,15 @@ public class LinkedList<T> {
 		head = head.next;
 	}
 	
+	public void popLast() {
+		int index = 0;
+		Node<T> temp = head;
+		while (temp.next != null) {
+			temp = temp.next;
+			index++;
+		}
+		deleteAt(index);
+	}
 	//This method is to delete elements at any index
 	public void deleteAt(int index) {
 		if (index == 0) {
