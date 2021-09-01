@@ -1,1 +1,1 @@
-# LinkedList: This repo consists of self made Linked List Implimentation using generics
+# LinkedList: This repo consists of self made Linked List Implementation using generics
