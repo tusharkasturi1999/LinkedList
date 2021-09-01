@@ -9,6 +9,8 @@ package com.bridgelabz.datastructure;
 public class LinkedList<T> {
 
 	Node<T> head;
+	int key =0;
+
 
 	/**
 	 * This method is the insert method newNode is created Temporary node temp is
@@ -79,11 +81,12 @@ public class LinkedList<T> {
 		System.out.println(temp.data);
 	}
 
-	//This method is to delete first element
+	// This method is to delete first element
 	public void pop() {
 		head = head.next;
 	}
-	
+
+	// This method is to pop last element
 	public void popLast() {
 		int index = 0;
 		Node<T> temp = head;
@@ -93,7 +96,8 @@ public class LinkedList<T> {
 		}
 		deleteAt(index);
 	}
-	//This method is to delete elements at any index
+
+	// This method is to delete elements at any index
 	public void deleteAt(int index) {
 		if (index == 0) {
 			pop();
@@ -108,5 +112,29 @@ public class LinkedList<T> {
 			temp.next = temp1.next;
 
 		}
+	}
+
+	//This method searches for the element and stores its index in key variable;
+	public boolean search(T searchKey) {
+		key = 0;
+		if(head==null) {
+			return false;
+		}
+		if(head.data==searchKey) {
+			System.out.println("Element found at Node " + key);
+			return true;
+		}
+		Node<T> temp = head;
+		while (temp.next!= null) {
+			temp = temp.next;
+			key++;
+			if (temp.data == searchKey) {
+				System.out.println("Element found at Node " + key);
+				return true;
+			}
+		}
+		System.out.println("Element not found ");
+		return false;
+
 	}
 }
