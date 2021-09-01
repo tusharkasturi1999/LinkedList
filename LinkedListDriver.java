@@ -15,11 +15,12 @@ public class LinkedListDriver {
 	public static void main(String[] args) {
 		LinkedList<Integer> object = new LinkedList<>();
 		object.insert(56);
-		object.show();
+		object.insert(30);
 		object.insert(70);
 		object.show();
-		object.insertAtIndex(0,30);
-		object.show();
-		object.search(30);
+		if(object.search(30)) {
+			object.insertAtIndex(object.key+1, 40);
+			object.show();
+		}
 	}
 }

@@ -9,8 +9,7 @@ package com.bridgelabz.datastructure;
 public class LinkedList<T> {
 
 	Node<T> head;
-	int key =0;
-
+	int key = 0;
 
 	/**
 	 * This method is the insert method newNode is created Temporary node temp is
@@ -114,18 +113,18 @@ public class LinkedList<T> {
 		}
 	}
 
-	//This method searches for the element and stores its index in key variable;
+	// This method searches for the element and stores its index in key variable;
 	public boolean search(T searchKey) {
 		key = 0;
-		if(head==null) {
+		if (head == null) {
 			return false;
 		}
-		if(head.data==searchKey) {
+		if (head.data == searchKey) {
 			System.out.println("Element found at Node " + key);
 			return true;
 		}
 		Node<T> temp = head;
-		while (temp.next!= null) {
+		while (temp.next != null) {
 			temp = temp.next;
 			key++;
 			if (temp.data == searchKey) {
