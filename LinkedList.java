@@ -42,8 +42,6 @@ public class LinkedList<T> {
 			Node<T> temp = head;
 			head = newNode;
 			newNode.next = temp;
-//			newNode.next = head;
-//			head = newNode;
 		}
 
 	}
