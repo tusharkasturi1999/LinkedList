@@ -10,7 +10,7 @@ public class LinkedList<T> {
 
 	Node<T> head;
 	int key = 0;
-
+	int size =0;
 	/**
 	 * This method is the insert method newNode is created Temporary node temp is
 	 * used to traverse
@@ -135,5 +135,23 @@ public class LinkedList<T> {
 		System.out.println("Element not found ");
 		return false;
 
+	}
+
+	//This method returns the size of the linked list
+	public int size() {
+		size = 0;
+		if (head == null) {
+			System.out.println(size);
+			return size;
+		}
+		Node<T> temp = head;
+
+		while (temp.next != null) {
+			temp = temp.next;
+			size++;
+		}
+		size++;
+		System.out.println("Size is " + size);
+		return size;
 	}
 }

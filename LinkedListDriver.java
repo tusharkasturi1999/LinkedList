@@ -16,11 +16,13 @@ public class LinkedListDriver {
 		LinkedList<Integer> object = new LinkedList<>();
 		object.insert(56);
 		object.insert(30);
+		object.insert(40);
 		object.insert(70);
 		object.show();
-		if(object.search(30)) {
-			object.insertAtIndex(object.key+1, 40);
+		if(object.search(40)) {
+			object.deleteAt(object.key);
 			object.show();
 		}
+		object.size();
 	}
 }
