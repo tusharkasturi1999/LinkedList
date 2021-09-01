@@ -30,6 +30,7 @@ public class LinkedList<T> {
 		}
 	}
 
+	// This method is to add at the start
 	public void insertAtStart(T data) {
 		Node<T> newNode = new Node<>(data);
 		newNode.data = data;
@@ -41,23 +42,30 @@ public class LinkedList<T> {
 			Node<T> temp = head;
 			head = newNode;
 			newNode.next = temp;
-
+//			newNode.next = head;
+//			head = newNode;
 		}
 
 	}
 
+	// This method is to add at any index
 	public void insertAtIndex(int index, T data) {
 		Node<T> newNode = new Node<>(data);
 		newNode.data = data;
 		newNode.next = null;
 
+		if (index == 0) {
+			insertAtStart(data);
+		}
+		else {
 		Node<T> temp = head;
 		for (int i = 0; i < index - 1; i++) {
+
 			temp = temp.next;
 		}
 		newNode.next = temp.next;
 		temp.next = newNode;
-
+		}
 	}
 
 	/**
