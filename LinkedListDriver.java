@@ -19,7 +19,8 @@ public class LinkedListDriver {
 		object.insert(70);
 		object.show();
 		object.insertAtIndex(0,30);
-
+		object.show();
+		object.pop();
 		object.show();
 	}
 }

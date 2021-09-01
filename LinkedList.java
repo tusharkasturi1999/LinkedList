@@ -54,15 +54,14 @@ public class LinkedList<T> {
 
 		if (index == 0) {
 			insertAtStart(data);
-		}
-		else {
-		Node<T> temp = head;
-		for (int i = 0; i < index - 1; i++) {
+		} else {
+			Node<T> temp = head;
+			for (int i = 0; i < index - 1; i++) {
 
-			temp = temp.next;
-		}
-		newNode.next = temp.next;
-		temp.next = newNode;
+				temp = temp.next;
+			}
+			newNode.next = temp.next;
+			temp.next = newNode;
 		}
 	}
 
@@ -78,5 +77,27 @@ public class LinkedList<T> {
 			temp = temp.next;
 		}
 		System.out.println(temp.data);
+	}
+
+	//This method is to delete first element
+	public void pop() {
+		head = head.next;
+	}
+	
+	//This method is to delete elements at any index
+	public void deleteAt(int index) {
+		if (index == 0) {
+			pop();
+		} else {
+			Node<T> temp = head;
+			Node<T> temp1 = null;
+			for (int i = 0; i < index - 1; i++) {
+
+				temp = temp.next;
+			}
+			temp1 = temp.next;
+			temp.next = temp1.next;
+
+		}
 	}
 }
