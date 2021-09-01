@@ -8,9 +8,10 @@ package com.bridgelabz.datastructure;
 
 public class LinkedList<T> {
 
-	Node<T> head;
+	public Node<T> head;
 	int key = 0;
-	int size =0;
+	int size = 0;
+
 	/**
 	 * This method is the insert method newNode is created Temporary node temp is
 	 * used to traverse
@@ -73,11 +74,15 @@ public class LinkedList<T> {
 
 		Node<T> temp = head;
 
-		while (temp.next != null) {
-			System.out.print(temp.data + "->");
-			temp = temp.next;
+		if (head == null) {
+			System.out.println("Empty");
+		} else {
+			while (temp.next != null) {
+				System.out.print(temp.data + "->");
+				temp = temp.next;
+			}
+			System.out.println(temp.data);
 		}
-		System.out.println(temp.data);
 	}
 
 	// This method is to delete first element
@@ -137,7 +142,7 @@ public class LinkedList<T> {
 
 	}
 
-	//This method returns the size of the linked list
+	// This method returns the size of the linked list
 	public int size() {
 		size = 0;
 		if (head == null) {
